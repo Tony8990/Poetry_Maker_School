@@ -1,0 +1,388 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.row::before,
+.row::after {
+	content: '';
+	display: table;
+}
+
+.row::after {
+	clear: both;
+}
+
+.col {
+	float: left;
+	min-height: 1px;
+}
+
+.col-1 {
+	width: 8.33333333%;
+}
+
+.col-2 {
+	width: 16.66666667%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33333333%;
+}
+
+.col-5 {
+	width: 41.66666667%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33333333%;
+}
+
+.col-8 {
+	width: 66.66666667%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33333333%;
+}
+
+.col-11 {
+	width: 91.66666667%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.container {
+	width: 1140px; 
+	margin: 0 auto;
+}
+ 
+.nav ul {
+  list-style: none;
+  background-color: #7f333c;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+}
+
+.nav li {
+  margin-top: 20px;
+  font-size: 24px;
+  width: 200px;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+ 
+.nav a:hover {
+  font-weight: bold;
+  border-bottom: solid 5px #fff;
+}
+ 
+.progetti{
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: -4px;
+} 
+
+.logo-nav {
+	float: left;
+}
+
+.logo {
+	margin-right: 0;
+}
+
+.img-1 {
+	height: 800px;
+	position: relative;
+}
+
+figure {
+	background-color: #7f333c;
+}
+
+figure > img {
+	width: 100%;
+	height: 800px;
+	opacity: 0.5;
+}
+
+.filter {
+ 	width: 100%;
+ 	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.image-description {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 70px;
+	padding-bottom: 20px;
+}
+
+
+
+.paragraph {
+	font-size: 24px;
+	line-height: 36px;
+	padding-bottom: 15px;
+}
+
+.title, .paragraph {
+	color: #ffffff;
+}
+
+#addProject {
+	width: 200px;
+	height: 50px;
+	background-color: #7f333c;
+	color: #fff;
+	border: none;
+	font-size: 18px;
+	margin-right: 50px;
+}
+
+#signUp {
+	width: 200px;
+	height: 50px;
+	background-color: #fff;
+	color: #000;
+	font-size: 18px;
+	border-color: #7f333c;
+}
+
+.picture {
+	width: 100%;
+}
+.poetry {
+	margin-top: 150px;
+}
+
+.line {
+	font-weight: bold;
+	color: #7f333c;
+	font-size: 50px;
+}
+
+.line-container{
+	float: left;
+	margin-top: -10px;
+}
+
+.reward-description-container {
+	margin-left: 80px;
+}
+
+.reward-description-container > h1 {
+	font-size: 48px;
+	color: #9b9b9b;
+	margin-bottom: 50px;
+}
+
+.reward-description-container > p {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.poetry-navigation {
+	float: right;
+}
+
+.poetry-container {
+	width: 338px;
+	height: 433px;
+	margin-right: 100px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	border: solid 1px #7f333c;
+}
+
+.poetry-text {
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	font-size: 18px;
+}
+
+.poetry-text > h1 {
+	padding-bottom: 25px;
+	font-size: 24px;
+}
+
+#previousPoetry {
+	float: left;
+	margin-top: 50%;
+	margin-left: -100px;
+}
+
+#nextPoetry {
+	float: right;
+	margin-top: 50%;
+}
+
+.jury-section-container {
+	margin-top: 150px;
+}
+
+.jury-year-selection {
+	margin-bottom: 100px;
+}
+
+.years {
+	float: right;
+	margin-top: -90px;
+}
+
+.years > p {
+	float: left;
+	margin-right: 10px;
+	font-size: 14px;
+	padding-top: 15px;
+	color: #4a4a4a;
+}
+
+.year-button {
+	float: right;
+	margin-right: 10px;
+	width: 100px;
+	height: 40px;
+	background-color: #fff;
+	color: #000;
+	font-size: 18px;
+	border-color: #7f333c;
+}
+
+.year-button:hover {
+	background-color: #7f333c;
+	color: #fff;
+}
+
+.year-button:focus {
+	background-color: #7f333c;
+	color: #fff;
+}
+
+.judges {	
+	margin-left: 10%;
+}
+
+.card {
+	background-color: white;
+	margin-bottom: 20px;
+	margin-right: 32px;
+	height: auto;
+	width: 166px;
+}
+
+.text {
+	padding: 0px 20px;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.judge-name {
+	font-size: 24px;
+	color: #7f333c;
+	font-weight: bold;
+}
+
+.icon {
+	margin-bottom: 20px;
+	padding-left: 111px;
+	padding-top: 15px;
+}
+
+.photo {
+	width: 100%
+}
+
+.footer {
+	width: 100%;
+	background-color: #7f333c;
+	position: absolute;
+}
+
+.logos {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.info {
+	width: 100%;
+	height: 20px;
+	bottom: 0px;
+	border-top: solid 2px #ffffff;
+}
+
+.info > p {
+	right: 0;
+	color: #ffffff;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.logos > img {
+	height: 60px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.privacy {
+	float: left;
+}
+
+.privacy > a {
+	float: left;
+	color: #ffffff;
+	margin-right: 20px;
+}
+
+.logo-poetry {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+#instagram-logo {
+	margin-left: 50px;
+	margin-right: 50px;
+}
