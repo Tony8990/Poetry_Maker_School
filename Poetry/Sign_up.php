@@ -1,4 +1,4 @@
-<?php /* Template Name: Registrati */ ?>
+<?php /* Template Name: Registration */ ?>
 
 <?php get_header(); ?>
 

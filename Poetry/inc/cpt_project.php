@@ -22,7 +22,9 @@ function register_project_cpt()
         'has_archive' => true,
         'exclude_from_search' => false,
         'publicly_queryable' => true,
-        'capability_type' => 'post',
+        'capability_type' => array("project", "projects"),
+        'map_meta_cap'  => true,
+
     );
     register_post_type('project', $args);
 }

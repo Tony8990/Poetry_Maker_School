@@ -46,7 +46,7 @@
 		$loop = new WP_Query($argProv);
 	}else{
 		$args = array('post_type' => 'project', 'post_for_page' => 3);
-		$post_loop = new WP_Query($args);
+		$loop = new WP_Query($args);
 
 	}
 
