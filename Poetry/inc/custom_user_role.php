@@ -16,10 +16,9 @@ function add_manager_role()
         )
     );
 }
+register_activation_hook(__FILE__,'add_manager_role');
 
-register_activation_hook(__FILE__, 'add_manager_role');
-
-add_action('admin_init', 'psp_add_role_caps', 999);
+add_action('admin_init','psp_add_role_caps',999);
 function psp_add_role_caps()
 {
 
@@ -44,4 +43,3 @@ function psp_add_role_caps()
 
     }
 }
-

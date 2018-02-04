@@ -1,6 +1,7 @@
 <?php /* Template Name: Contact */ ?>
 
-<?php get_header(); ?>
+<?php
+get_header();?>
 
 <div id="primary">
     <div id="content" role="main">
@@ -8,6 +9,6 @@
     </div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer();?>
 
 

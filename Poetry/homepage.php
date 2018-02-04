@@ -1,59 +1,46 @@
-		<?php /* Template Name: Homepage */ ?>
+<?php /* Template Name: Homepage */ ?>
 
-		<?php get_header();?>
+<?php get_header(); ?>
 
+<?php
 
-		<div class="row">
-			<div class="col-md-6">
-				<h3>Scopri Progetti</h3>
-					
-		<form action="<?php echo home_url('progetti'); ?>" method="get">
-			  <fieldset>
-			<?= do_shortcode('[lb-sl form]');?>
-			<label for="autore">Partner Letterario:</label>
-			<input type="text" name="autore" id="autore" value="" placeholder="Ricerca Partner"/>
-			<input type="submit" id="searchsubmit" value="Cerca" />
-		</fieldset>
-		</form>
-		</div>
-		</div>
-		<?php
+$quote_args = array('post_type'=>'quote','post_for_page'=>1);
+$quote_loop = new WP_Query($quote_args);
 
+if ($quote_loop->have_posts()):?>
 
+    <?php while ($quote_loop->have_posts()):$quote_loop->the_post();?>
+        <div>
+            <?php get_template_part( 'inc/template-parts/post/content', get_post_format() );?>
+            <p><?php echo the_field('autore') ?></p>
+        </div>
+    <?php endwhile;
 
-		$args = array('post_type' => 'News', 'post_for_page' => 3);
-		$post_loop = new WP_Query($args);
+endif;
 
-		if ($post_loop->have_posts()): ?>
-			<div id="primary">
-				<div id="content" role="main">
-					<?php while ($post_loop->have_posts()):
+$args = array('post_type'=>'News','post_for_page'=>3);
+$post_loop = new WP_Query($args);
 
-					$post_loop->the_post();
+if ($post_loop -> have_posts()): ?>
 
-					the_title();
-					the_content();
-					the_date('d/M/Y');
-					?>
-					<?php
+    <div id="primary">
+        <div id="content" role="main">
+            <?php while ($post_loop->have_posts()):$post_loop->the_post();
 
-					if (get_field('città') || get_field('scuola') || get_field('partner_letterario')): ?>
+            get_template_part( 'inc/template-parts/post/content', get_post_format() );
 
-						<p><?php echo the_field('città') ?></p>
-						<p><?php echo the_field('scuola') ?></p>
-						<p><?php echo the_field('partner_letteraio') ?></p>
+            if( get_field('Città')||get_field('scuola')||get_field('partner_letterario')): ?>
+                <p><?php echo the_field('Città') ?></p>
+                <p><?php echo the_field('scuola') ?></p>
+                <p><?php echo the_field('partner_letteraio')?></p>
+            <?php endif; ?>
 
+            <?php endwhile; ?>
+        </div><!-- #content -->
+    </div><!-- #primary -->
 
-					<?php endif; ?>
+<?php endif;?>
 
-
-				</div>
-				<?php endwhile; ?>
-
-			</div><!-- #content -->
-			</div><!-- #primary -->
-		<?php endif; ?>
-
-		<?php get_footer(); ?>
+<?php get_footer();?>
 
 
