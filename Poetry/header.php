@@ -18,21 +18,32 @@
 
     <!-- Questa funzione di Wordpress carica tutti i tag della head impostati da Wordpress -->
     <?php wp_head(); ?>
+
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/italyLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
 </head>
 
 <!-- La funzione di Wordpress body_class() aggiunge al body delle classi specifiche in base alla pagina sulla quale ci si trova -->
 <!-- Questo permette di stylare con il css specificatamente elementi di diverse pagine -->
 <body <?php body_class(); ?>>
 
-<div class="header">
-    <?php
-    // Utilizziamo la funzione dichiarata in inc/menu.php per posizionare qui il menu header
-    ?>
+<header>
     <div class="nav">
-        <?php header_menu();?>
+        <img class="logo-nav" src="<?php echo get_stylesheet_directory_uri(); ?>/css/iscriviti/img/logo.png">
+        <ul>
+            <li class="home"><a href="<?php echo get_permalink( get_page_by_title( "Homepage" )->ID ); ?>">HOME</a></li>
+            <li class="progetti"><a href="<?php echo get_permalink( get_page_by_title( "Progetti" )->ID ); ?>">SCOPRI I PROGETTI</a></li>
+            <li class="premi"><a href="<?php echo get_permalink( get_page_by_title( "Premi" )->ID ); ?>">PREMI<br>POETRY</a></li>
+            <li class="contatti"><a href="<?php echo get_permalink( get_page_by_title( "Contatti" )->ID ); ?>">CONTATTI</a></li>
+            <li class="registrati"><a href="<?php echo get_permalink( get_page_by_title( "Registrati" )->ID ); ?>">REGISTRATI</a></li>
+            <li class="accedi"><a href="<?php echo get_permalink( get_page_by_title( "Accedi" )->ID ); ?>">ACCEDI</a></li>
+        </ul>
     </div>
-
-</div>
+</header>
 
 <div class="page-wrapper"> <!-- Apro page-wrapper -->
 

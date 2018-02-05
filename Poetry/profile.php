@@ -2,7 +2,7 @@
 
 <?php get_header();
 
-echo  do_shortcode('[ultimatemember form_id=116]');
+echo  do_shortcode('[ultimatemember form_id=6]');
 
 
 $argProv = array(

@@ -93,6 +93,16 @@ if (function_exists("register_field_group")) {
                 'default_value' => '',
                 'layout' => 'vertical',
             ),
+            /*array (
+                'key' => 'field_5a6b6b4c9c5d7',
+                'label' => 'Location',
+                'name' => 'location',
+                'type' => get_posizione(),
+                'center_lat' => '',
+                'center_lng' => '',
+                'zoom' => '',
+                'height' => '',
+            ),*/
             array(
                 'key' => 'field_5a5b4883c7a13',
                 'label' => 'Pdf del Progetto',
@@ -185,17 +195,6 @@ if (function_exists("register_field_group")) {
                 'preview_size' => 'square_small',
                 'library' => 'all',
             ),
-            array (
-                'key' => 'field_5a745477319d0',
-                'label' => 'Data',
-                'name' => 'data',
-                'type' => 'date_picker',
-                'required' => 1,
-                'date_format' => 'yymmdd',
-                'display_format' => 'dd/mm/yy',
-                'first_day' => 1,
-            ),
-
         ),
         'location' => array(
             array(

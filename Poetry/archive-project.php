@@ -9,50 +9,51 @@
  * @since 1.0
  * @version 1.0
  */
+?>
 
-get_header(); ?>
-
-
-<div class="wrap">
-
-    <?php if (have_posts()) : ?>
-        <header class="page-header">
+<?php get_header(); ?>
 
 
-        </header><!-- .page-header -->
-    <?php endif; ?>
+    <div class="wrap">
 
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+        <?php if (have_posts()) : ?>
+            <header class="page-header">
 
-            <?php
-            if (have_posts()) : ?>
+
+            </header><!-- .page-header -->
+        <?php endif; ?>
+
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
                 <?php
-                /* Start the Loop */
-                while (have_posts()) : the_post();
+                if (have_posts()) : ?>
+
+                    <?php
+                    /* Start the Loop */
+                    while (have_posts()) : the_post();
 
 
-                    get_template_part('template-parts/post/content', get_post_format());
-                    ?>
-                    <p><?php echo the_field('autore') ?></p>
+                        get_template_part('template-parts/post/content', get_post_format());
+                        ?>
+                        <p><?php echo the_field('autore') ?></p>
 
 
-                    <a href="<?php the_field('pdf'); ?>" download>Scarica Progetto</a>
+                        <a href="<?php the_field('pdf'); ?>" download>Scarica Progetto</a>
 
 
-                <?php endwhile;
+                    <?php endwhile;
 
 
-            else :
+                else :
 
-                get_template_part('template-parts/post/content', 'none');
+                    get_template_part('template-parts/post/content', 'none');
 
-            endif; ?>
+                endif; ?>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
+            </main><!-- #main -->
+        </div><!-- #primary -->
 
-</div><!-- .wrap -->
+    </div><!-- .wrap -->
 
 <?php get_footer(); ?>

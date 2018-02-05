@@ -1,0 +1,258 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.row::before,
+.row::after {
+	content: '';
+	display: table;
+}
+
+.row::after {
+	clear: both;
+}
+
+.col {
+	float: left;
+	min-height: 1px;
+}
+
+.col-1 {
+	width: 8.33333333%;
+}
+
+.col-2 {
+	width: 16.66666667%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33333333%;
+}
+
+.col-5 {
+	width: 41.66666667%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33333333%;
+}
+
+.col-8 {
+	width: 66.66666667%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33333333%;
+}
+
+.col-11 {
+	width: 91.66666667%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.container {
+	width: 900px; 
+	margin: 0 auto;
+}
+ 
+
+.img-1 {
+	height: 800px;
+	position: relative;
+}
+
+figure {
+	background-color: #7f333c;
+}
+
+figure > img {
+	width: 100%;
+	height: 800px;
+}
+
+.filter {
+ 	width: 100%;
+ 	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.image-description {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.title-container {
+	margin-left: 25%;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 70px;
+	padding-bottom: 20px;
+}
+
+.single-line {
+	display: block;
+}
+
+.input-info {
+	margin-bottom: 30px;
+	width: 250px;
+	height: 40px;
+	font-size: 20px;
+}
+
+.multiple-line {
+	margin-left: 75px;
+}
+
+.paragraph {
+	font-size: 24px;
+	line-height: 36px;
+	padding-bottom: 15px;
+}
+
+.title {
+	color: #fff;
+}
+
+.form-wrapper {
+	height: 1300px;
+	border: solid 3px #7f333c;
+	margin-top: -500px;
+	margin-bottom: 100px;
+	position: relative;
+	background-color: #fff;
+}
+
+.personal-info {
+	position: absolute;
+	padding-top: 100px;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.attach-button {
+	width: 400px;
+	text-align: left;
+}
+
+.attach-button > button {
+	width: 150px;
+	height: 50px;
+	background-color: #fff;
+	color: #000;
+	font-size: 18px;
+	border-color: #7f333c;
+	margin-bottom: 10px;
+}
+
+.attach-button > p {
+	color: #9b9b9b;
+}
+
+.contacts-info {
+	padding-top: 600px;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.personal-info > h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.contacts-info > h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.send-button-container {
+	float: right;
+	margin-right: 50px;
+}
+
+.send-button-container > button {
+	margin-top: 100px;
+	font-size: 26px;
+	width: 200px;
+	height: 50px;
+	background-color: #fff;
+	color: #000;
+	border-color: #7f333c;
+}
+
+.line {
+	font-weight: bold;
+	color: #7f333c;
+	font-size: 50px;
+}
+
+.line-container{
+	float: left;
+	margin-top: -10px;
+}
+
+@media screen and (max-width: 920px) {
+	.container {
+		width: 600px; 
+		margin: 0 auto;
+	}
+
+	.multiple-line {
+		margin-left: 0px;
+		display: block;
+	}
+
+	.input-info {
+		clear: both;
+		margin-left: 100px;
+	}
+
+	.contacts-info {
+		padding-top: 700px;
+		
+	}
+
+	.form-wrapper {
+		height: 1450px;
+	}
+
+	.send-button-container > button {
+		float: right;
+		margin-top: -123px;
+	}
+
+	.attach-button {
+		width: 250px;
+	}
+} 

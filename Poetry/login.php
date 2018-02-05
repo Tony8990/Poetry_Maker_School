@@ -4,7 +4,7 @@
 
 <div id="primary">
     <div id="content" role="main">
-        <?php echo do_shortcode('[ultimatemember form_id=115]'); ?>
+        <?php echo do_shortcode('[ultimatemember form_id=5]'); ?>
     </div>
 </div>
 
