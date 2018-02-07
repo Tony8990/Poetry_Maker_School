@@ -53,8 +53,26 @@ function add_css()
     // È possibile aggiungere un file css presente nella cartella del tema
     wp_register_style('normalize', get_template_directory_uri() . '/vendor/normalize/normalize.css', array(), null, 'all');
     wp_enqueue_style('normalize');
-    wp_register_style('main', get_template_directory_uri() . '/css/main.css', array('normalize'), null, 'all');
-    wp_enqueue_style('main');
+    wp_register_style('homepage', get_template_directory_uri() . '/css/homepage/homepage.css', array(), null, 'all');
+    wp_enqueue_style('homepage');
+    wp_register_style('reset_homepage', get_template_directory_uri() . '/css/homepage/reset_homepage.css', array(), null, 'all');
+    wp_enqueue_style('reset_homepage');
+    /*wp_register_style('iscriviti', get_template_directory_uri() . '/css/iscriviti/css/iscriviti.css', array(), null, 'all');
+    wp_enqueue_style('iscriviti');*/
+    /*wp_register_style('reset_iscriviti', get_template_directory_uri() . '/css/iscriviti/css/reset_iscriviti.css', array(), null, 'all');
+    wp_enqueue_style('reset_iscriviti');*/
+    wp_register_style('premi', get_template_directory_uri() . '/css/premi/css/premi.css', array(), null, 'all');
+    wp_enqueue_style('premi');
+    wp_register_style('reset_premi', get_template_directory_uri() . '/css/premi/css/reset_premi.css', array(), null, 'all');
+    wp_enqueue_style('reset_premi');
+    wp_register_style('progetti', get_template_directory_uri() . '/css/progetti/progetti.css', array(), null, 'all');
+    wp_enqueue_style('progetti');
+    wp_register_style('footer', get_template_directory_uri() . '/css/footer/footer.css', array(), null, 'all');
+    wp_enqueue_style('footer');
+    wp_register_style('header', get_template_directory_uri() . '/css/header/header.css', array(), null, 'all');
+    wp_enqueue_style('header');
+    wp_register_style('map', get_template_directory_uri() . '/css/map/map.css', array(), null, 'all');
+    wp_enqueue_style('map');
 
     // È possibile anche aggiungere un url remoto (es. Google Fonts)
     // wp_register_style('webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,800,900', array(), null, 'all');
@@ -69,7 +87,6 @@ function add_css()
 }
 
 add_action('wp_enqueue_scripts', 'add_css');
-
 
 
 // Carichiamo i JS che ci servono
@@ -96,12 +113,6 @@ function add_js()
 }
 
 add_action('wp_enqueue_scripts', 'add_js');
-
-
-
-
-
-
 
 // Una funziona che toglie dalle immagini caricate dentro l'editor di wordpress di avere le dimensioni fissate inline nel tag quando messe nell'HTML.
 // Utile per il responsive: spesso le dimensioni inline sono difficili da gestire.

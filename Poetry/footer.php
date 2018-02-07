@@ -1,9 +1,20 @@
 </div> <!-- Chiudo page-wrapper -->
-<footer>
-
-    <?php footer_menu(); ?>
+<footer class="footer">
+    <div class="logos">
+        <div class="logo-poetry">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png">
+        </div>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook-logo.png">
+        <img id="instagram-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/instagram-logo.png">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/twitter-logo.png">
+    </div>
+    <div class="info">
+        <div class="privacy">
+            <a href="#">Privacy</a>
+            <a href="#">Terms of conditions</a>
+        </div>
+        <p>2018 Poetry Maker inc. All rights reserved</p>
+    </div>
 </footer>
-<!-- Questa funzione di Wordpress carica tutti i tag del footer impostati da Wordpress -->
-<?php wp_footer(); ?>
 </body>
 </html>

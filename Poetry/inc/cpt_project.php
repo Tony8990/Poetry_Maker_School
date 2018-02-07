@@ -44,7 +44,7 @@ function project_location_callback($post) {
     $comuni =get_post_meta($post->ID, 'sl-comuni-1', true);
     ?>
     <?php echo do_shortcode('[lb-sl label_comuni]');?>
-<?php
+    <?php
 }
 
 function save_project_location_data($post_id) {
