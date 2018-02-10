@@ -69,6 +69,26 @@ function add_css()
 }
 
 add_action('wp_enqueue_scripts', 'add_css');
+function add_css_maps()
+{
+    // È possibile aggiungere un file css presente nella cartella del tema
+    wp_register_style('maps', get_template_directory_uri() . '/css/maps.css', array(), null, 'all');
+    wp_enqueue_style('maps');
+
+
+    // È possibile anche aggiungere un url remoto (es. Google Fonts)
+    // wp_register_style('webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,800,900', array(), null, 'all');
+    // wp_enqueue_style('webfont');
+
+    // Inoltre è possibile aggiungere un css solo se una determinata condizione è vera
+    // In questo esempio aggiungiamo il file home.css solo se ci troviamo sulla pagina di home
+    // if(is_home()) {
+    //   wp_register_style('home', get_template_directory_uri() . '/css/home.css', array(), null, 'all');
+    //   wp_enqueue_style('home');
+    // }
+}
+
+add_action('wp_enqueue_scripts', 'add_css_maps');
 
 
 
@@ -96,6 +116,25 @@ function add_js()
 }
 
 add_action('wp_enqueue_scripts', 'add_js');
+function add_js_maps()
+{
+    // È possibile aggiungere un file js presente nella cartella del tema
+    wp_register_script('maps_js', get_template_directory_uri() . '/js/maps.js', array('jquery'), null, true);
+    wp_enqueue_script('maps_js');
+
+    // È possibile aggiungere un url remoto (es. CDN)
+    // wp_register_script('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js', array('jquery'), null, true);
+    // wp_enqueue_script('select2');
+
+    // Inoltre è possibile aggiungere un css solo se una determinata condizione è vera
+    // In questo esempio aggiungiamo il file home.css solo se ci troviamo sulla pagina di home
+    // if(is_home()) {
+    //   wp_register_script('home_js', get_template_directory_uri() . '/js/home.js', array('jquery'), null, true);
+    //   wp_enqueue_script('home_js');
+    // }
+}
+
+add_action('wp_enqueue_scripts', 'add_js_maps');
 
 
 

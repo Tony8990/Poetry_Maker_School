@@ -92,7 +92,17 @@ if (function_exists("register_field_group")) {
                 ),
                 'default_value' => '',
                 'layout' => 'vertical',
-            ),
+            ),array (
+                    'key' => 'field_5a7dcd579de09',
+                    'label' => 'Posizione',
+                    'name' => 'posizione',
+                    'type' => 'google_map',
+                    'required' => 1,
+                    'center_lat' => '',
+                    'center_lng' => '',
+                    'zoom' => '',
+                    'height' => '',
+                ),
             array(
                 'key' => 'field_5a5b4883c7a13',
                 'label' => 'Pdf del Progetto',

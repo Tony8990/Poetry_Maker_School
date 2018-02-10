@@ -11,7 +11,11 @@
 			  <fieldset>
 			<?= do_shortcode('[lb-sl form]');?>
 			<label for="autore">Partner Letterario:</label>
-			<input type="text" name="autore" id="autore" value="" placeholder="Ricerca Partner"/>
+                  <select name="ruoli" id="ruoli">
+                      <option value="Partner">Partner Letterario</option>
+                      <option value="Scuola">Scuola</option>
+                      <option value="">......</option>
+                  </select>
 			<input type="submit" id="searchsubmit" value="Cerca" />
 		</fieldset>
 		</form>
